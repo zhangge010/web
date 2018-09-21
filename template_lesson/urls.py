@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'admin/', admin.site.urls),
     url(r'show_time/', views.show_time),
     url(r'query/', views.query),
+    url(r'login/', views.login,name='login'),
 ]

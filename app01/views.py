@@ -20,7 +20,9 @@ class Animal():
 def query(request):
 
     l=["zhang","村长","书记"]
-    d={"name":"校长","age":12}
+    zhangge=[]
+
+    d={"name":"校长","age":5}
     c=Animal("alex",'公')
 
     test="hello world"
@@ -32,3 +34,10 @@ def query(request):
     a="<a href='http://www.baidu.com' target='_blank'>click</a>"
 
     return render(request,"index.html",locals())
+
+
+def login(request):
+    user=request.POST.get('user')
+    print(user)
+    return HttpResponse('ok')
+
