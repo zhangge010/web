@@ -38,6 +38,9 @@ def query(request):
 
 def login(request):
     user=request.POST.get('user')
-    print(user)
-    return HttpResponse('ok')
+    if user=='zhangge':
+        print(user)
+        return HttpResponse('ok')
+    else:
+        return HttpResponse('用户名错误')
 
