@@ -1,3 +1,4 @@
+{% load myTag %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,12 +74,23 @@
 
 
 
-<form action="{% url 'login' %}" method="post">
-    <p>姓名 <input type="text" name="user"></p>
-    <p>密码 <input type="text" name="pwd"></p>
-    <p> <input type="submit"></p>
-    {% csrf_token %}
-</form>
+{#<form action="{% url 'login' %}" method="post">#}
+{#    <p>姓名 <input type="text" name="user"></p>#}
+{#    <p>密码 <input type="text" name="pwd"></p>#}
+{#    <p> <input type="submit"></p>#}
+{#    {% csrf_token %}#}
+{#</form>#}
+
+
+{#传参数只能传一个#}
+{#{{ d.age|filter_multi:3 }}#}
+
+{#不能放在控制语句里面#}
+
+{#{% simple_tag_multi 3 6 d.age%}#}
+
+{#-----------------------------------------------------------------------#}
+
 
 
 

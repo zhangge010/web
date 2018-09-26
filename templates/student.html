@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+
+
+{% block content %}
+    {# #继承父类#}
+    {{ block.super }}
+     {% for student in student_list %}
+            <h2>学生:{{ student }}</h2>
+        {% endfor %}
+    {% include "test.html" %}
+{% endblock %}

@@ -44,3 +44,10 @@ def login(request):
     else:
         return HttpResponse('用户名错误')
 
+def backend(request):
+    return render(request, "base.html")
+
+def student(request):
+    student_list=["张三","李四",'王五']
+    return render(request,"student.html",locals())
+

@@ -23,4 +23,7 @@ urlpatterns = [
     url(r'show_time/', views.show_time),
     url(r'query/', views.query),
     url(r'login/', views.login,name='login'),
+    url(r'backend/', views.backend),
+    url(r'student/', views.student),
+
 ]
