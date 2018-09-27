@@ -18,6 +18,7 @@ from django.urls import path
 from django.conf.urls import url,include
 from app01 import views
 
+
 urlpatterns = [
     url(r'admin/', admin.site.urls),
     url(r'show_time/', views.show_time),
@@ -25,5 +26,7 @@ urlpatterns = [
     url(r'login/', views.login,name='login'),
     url(r'backend/', views.backend),
     url(r'student/', views.student),
+    url(r'index01/', views.index01),
+    url(r'addbook/', views.addbook),
 
 ]

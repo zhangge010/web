@@ -1,4 +1,5 @@
 from django.shortcuts import render,HttpResponse
+from app01.models import *
 
 # Create your views here.
 
@@ -51,3 +52,13 @@ def student(request):
     student_list=["张三","李四",'王五']
     return render(request,"student.html",locals())
 
+
+
+def index01(request):
+    return render(request,'index01.html')
+
+
+def addbook(request):
+    b=Book(name="python基础",price=99,author="yuan",pub_date="2017-12-12")
+    b.save()
+    return HttpResponse("添加成功")
