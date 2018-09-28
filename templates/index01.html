@@ -17,6 +17,9 @@
             text-align: center;
 
         }
+        a:hover{
+            color: #2029ff;
+        }
     </style>
 
 
@@ -27,9 +30,19 @@
 <div class="outer">
     <div class="head">标题</div>
     <div class="content">
-        <a href="/addbook/">添加书籍</a>
-        <a href="">修改书籍</a>
-        <a href="">删除书籍</a>
+        <div><a href="/addbook/">添加书籍</a></div>
+        <div><a href="/update/">修改书籍</a></div>
+        <div><a href="/delete/">删除书籍</a></div>
+        <div><a href="/select/">查询书籍</a></div>
+    </div>
+    <hr>
+    <div class="queryResult">
+        {% for book in book_list %}
+
+            <div>{{ book.name }}&nbsp;&nbsp; {{ book.author }} &nbsp;&nbsp;{{ book.price }}</div>
+
+
+        {% endfor %}
     </div>
 </div>
 

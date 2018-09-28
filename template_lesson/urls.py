@@ -28,5 +28,8 @@ urlpatterns = [
     url(r'student/', views.student),
     url(r'index01/', views.index01),
     url(r'addbook/', views.addbook),
+    url(r'update/', views.update),
+    url(r'delete/', views.delete),
+    url(r'select/', views.select),
 
 ]
