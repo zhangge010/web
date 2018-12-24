@@ -1,0 +1,101 @@
+{% load myTag %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .first{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+{#<h1>hello {{ l.2}}</h1>#}
+{#<h2>hello {{ d.name}}</h2>#}
+{#<h2>hello {{ d.age}}</h2>#}
+{#<h2>hello {{ c.name}}</h2>#}
+{##}
+{##}
+{#<h1>100+1={{ num|add:1 }}</h1>#}
+{#<h1>{{test|capfirst}}</h1>#}
+{#<h1>{{ t }}</h1>#}
+{#<h1>{{ t |date:"Y-m-d H:i:s"}}</h1>#}
+{#<h1>{{ list|default:'空的'}}</h1>#}
+{#<h1>{{ a|safe }}</h1>#}
+{#{% autoescape off %}#}
+{#    <h1>{{ a }}</h1>#}
+{#{% endautoescape %}#}
+{##}
+{##}
+{##}
+{#{% if d.age > 20%}#}
+{##}
+{#    {% if d.age < 50 %}#}
+{#        <h1>{{ d.name }}年龄大于20小于50</h1>#}
+{#     {% else %}#}
+{#        <h1>hello{{ d.name }}</h1>#}
+{#    {% endif %}#}
+{#{% elif d.age > 10 %}#}
+{#    <h1>{{ d.name }}的年龄大于10小于20</h1>#}
+{#{% else %}#}
+{#    <h1>{{ d.name }}的年龄小于10</h1>#}
+{#{% endif %}#}
+{##}
+{##}
+{#{% for name in l %}#}
+{#    <h2>{{ forloop.counter  }} : {{ name }}</h2>#}
+{#    <h2>{{ forloop.revcounter  }} : {{ name }}</h2>#}
+{##}
+{#{% endfor %}#}
+{##}
+{##}
+{##}
+{#{% for name in zhangge %}#}
+{#    {% if forloop.first %}#}
+{#        <li class="first">#}
+{#    {% else %}#}
+{#        <li>#}
+{#    {% endif %}#}
+{#    {{ name }}#}
+{#    </li>#}
+{#{% empty %}#}
+{#    <h1>没有相关文章</h1>#}
+{##}
+{#{% endfor %}#}
+{##}
+{##}
+{##}
+{#{% for i in zhangge %}#}
+{#{% empty %}#}
+{#    <h1>没有相关文章</h1>#}
+{##}
+{#{% endfor %}#}
+
+
+
+{#<form action="{% url 'login' %}" method="post">#}
+{#    <p>姓名 <input type="text" name="user"></p>#}
+{#    <p>密码 <input type="text" name="pwd"></p>#}
+{#    <p> <input type="submit"></p>#}
+{#    {% csrf_token %}#}
+{#</form>#}
+
+
+{#传参数只能传一个#}
+{#{{ d.age|filter_multi:3 }}#}
+
+{#不能放在控制语句里面#}
+
+{#{% simple_tag_multi 3 6 d.age%}#}
+
+{#-----------------------------------------------------------------------#}
+
+
+
+
+
+
+
+</body>
+</html>
