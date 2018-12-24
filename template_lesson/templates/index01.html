@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .head{
+            line-height: 60px;
+            background-color: green;
+            font-size: 25px;
+            color: white;
+            text-align: center;
+
+        }
+        a:hover{
+            color: #2029ff;
+        }
+        .manage{
+            text-align: left;
+            padding: 20px 0;
+            margin: 20px 20px;
+            font-size: 18px;
+
+        }
+        .manage a{
+            text-decoration: none;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+<div class="outer">
+    <div class="head">标题</div>
+    <div class="content">
+        <div class="manage"><a href="/addbook/">添加书籍</a></div>
+        <div class="manage"><a href="/update/">修改书籍</a></div>
+        <div class="manage"><a href="/delete/">删除书籍</a></div>
+        <div class="manage"><a href="/select/">查询书籍</a></div>
+    </div>
+    <hr>
+    <div class="queryResult">
+        {% for book in book_list %}
+
+            <div>{{ book.name }}&nbsp;&nbsp; {{ book.publish.name}} &nbsp;&nbsp;{{ book.price }} &nbsp;{{ book.pub_date }}</div>
+
+
+        {% endfor %}
+    </div>
+ <div>{{a}}</div>
+ <div>{{b}}</div>
+</div>
+
+</body>
+</html>
